@@ -64,10 +64,10 @@
                 xAxes: [],
                 yAxes: [{
                     ticks: {
-                        @if(!isset($options['begin_at_zero']) || $options['begin_at_zero'] != true)
-                        beginAtZero:true
-                        @else
+                        @if(isset($options['begin_at_zero']) && $options['begin_at_zero'] === false)
                         beginAtZero:false
+                        @else
+                        beginAtZero:true
                         @endif
                     },
                     @if($options['chart_type'] == 'bar' && isset($options['stacked']) && $options['stacked'] == true)
