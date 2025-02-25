@@ -64,7 +64,7 @@
                 xAxes: [],
                 yAxes: [{
                     ticks: {
-                        @if(!isset($options['begin_at_zero']) || $options['being_at_zero'] != true)
+                        @if(!isset($options['begin_at_zero']) || $options['begin_at_zero'] != true)
                         beginAtZero:true
                         @else
                         beginAtZero:false
